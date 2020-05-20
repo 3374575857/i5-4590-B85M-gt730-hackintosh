@@ -37,3 +37,5 @@ iCloud & App Store & iMessage & FaceTime：請自行生成MLB、 ROM、SystemSer
 2020/04/12:修改配置文件，啟用官方RTC補丁，修復啟用小憩後自動喚醒的問題。
 
 2020/05/01:修改ssdt-plug.aml為opencore0.5.7對應的版本，修復睡死問題。
+
+2020/05/20:更新opencore版本0.5.8、添加SSDT-EC.aml
