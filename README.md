@@ -10,24 +10,31 @@ cpu：intel i5 4590
 
 
 ---
+![](./images/1.png)
 
-系統版本：macOS Catalina 10.15.4
+系統版本：macOS Catalina 10.15.7
 
-OpenCore 版本：0.5.7
+OpenCore 版本：0.70
 
-HD Graphics 4600：本人電腦的壞了，沒測試。
+HD Graphics 4600：正常(以前以為壞了，去BIOS看才發現只是被禁用了)
 
 GT730：正常。原生驅動。注意：gt730 僅支持開普勒架構的。
 
-3.5mm聲音：正常使用，使用AppleALC驅動。 DeviceProperties -> Add -> PciRoot(0x0)/Pci(0x1B,0x0) -> layout-id注入ID 07000000。
+3.5mm聲音：正常使用，使用AppleALC驅動。
 
-有線網卡：正常。使用了kexts/IntelMausi.kext
+有線網卡：正常。
 
 睡眠喚醒：正常。
 
 關機開機：正常。
 
+硬件加速：正常。
+
+![](./images/2.png)
+
 iCloud & App Store & iMessage & FaceTime：請自行生成MLB、 ROM、SystemSerialNumber、SystemUUID，並相應的修改PlatformInfo -> Generic。
+
+USB port 定製：按照 [這個](https://github.com/corpnewt/USBMap) 定製完了之後，替換掉我的，並修改配置文件。
 
 ---
 更新日誌：
@@ -39,3 +46,5 @@ iCloud & App Store & iMessage & FaceTime：請自行生成MLB、 ROM、SystemSer
 2020/05/01:修改ssdt-plug.aml為opencore0.5.7對應的版本，修復睡死問題。
 
 2020/05/20:更新opencore版本0.5.8、添加SSDT-EC.aml
+
+2021/6/18:更新 opencore 版本0.7.0
